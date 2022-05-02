@@ -6,22 +6,40 @@
 
 .navbar .logo {
     width: 100px;
-    margin-left: 20px;
+    margin-left: 40px;
     padding: 15px 0 15px 0;
 }
 
 .navbar .menu {
     display: flex;
     list-style: none;
-    margin-right: 10px;
 }
 
 .navbar .menu a {
     text-decoration: none;
     color : #fff;
     margin: 0 10px 0 10px;
+    transition: color 0.5s;
 }
 
 .navbar .menu a:hover {
     color: #90ee90;
+}
+
+.btn-navbar {
+    margin-right: 40px;
+    background-color: #000;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.btn-navbar span {
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn-navbar:active {
+    background-color: #333333;
 }

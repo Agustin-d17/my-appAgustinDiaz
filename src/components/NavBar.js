@@ -1,5 +1,6 @@
 import './main.css';
-import logoHeader from './logoHeader.png'
+import logoHeader from '../assets/logoHeader.png'
+import CartWidget from './CartWidget';
 
 function Navbar() {
     return <navbar className="navbar">
@@ -13,6 +14,8 @@ function Navbar() {
             <li><a href="/#">Nosotros</a></li>
             <li><a href="/#">Contacto</a></li>
         </ul>
+
+        <CartWidget icon="shopping_cart" />
     </navbar>
 }
 
