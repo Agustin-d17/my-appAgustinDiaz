@@ -1,3 +1,4 @@
+/* Header */
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -42,4 +43,11 @@
 
 .btn-navbar:active {
     background-color: #333333;
+}
+
+/* Main */
+
+.title {
+    width: 100%;
+    text-align: center;
 }
