@@ -52,6 +52,55 @@
     text-align: center;
 }
 
+/* ItemListContainer */
+.Item-list-container {
+    padding: 20px
+}
+
+/* ItemList */
+.item-list {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 20px;
+}
+/* Item 415px */
+.item-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 247px;
+    height: 420px;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+
+.item-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.item-info img {
+    width: 80%;
+}
+
+.item-info .item-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #334433;
+}
+
+.item-info div {
+    display: flex;
+    justify-content: space-between;
+    width: 80%
+}
+
+
 /* ItemCount */
 .item-count {
     display: flex;
@@ -59,16 +108,36 @@
     justify-content: space-between;
     justify-content: center;
     align-items: center;
-    width: 300px;
+    width: 247px;
+    margin-bottom: 15px;
     padding: 5px;
-    border: 1px solid #888888;
 }
 
 .contador {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
     width: 90%;
     padding: 5px;
     margin-bottom: 5px;
-    border: 1px solid #888888;
+}
+
+.btn-count,
+.btn-add {
+    border: none;
+    width: 90%;
+    background-color: #60ee60;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn-add:hover {
+    background-color: #90ee90;
+}
+
+.btn-count {
+    width: 35px;
+    height: 35px
 }

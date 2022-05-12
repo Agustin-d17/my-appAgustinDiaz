@@ -2,7 +2,7 @@ import './main.css';
 import logoHeader from '../assets/logoHeader.png'
 import CartWidget from './CartWidget';
 
-function Navbar() {
+function NavBar() {
     return <navbar className="navbar">
         <div>
             <img src={logoHeader} alt="logo" className="logo"/>
@@ -19,4 +19,4 @@ function Navbar() {
     </navbar>
 }
 
-export default Navbar;
+export default NavBar;

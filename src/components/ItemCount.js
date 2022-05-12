@@ -18,15 +18,12 @@ function ItemCount({ stock, initial, onAdd }) {
 
 
     return <div className="item-count">
-                <div class="item-title">
-                    <p>Item name</p>
-                </div>
                 <div className="contador">
-                    <button onClick={removeItem}>-</button>
+                    <button className="btn-count" onClick={removeItem}>-</button>
                     <p>{seleccion}</p>
-                    <button onClick={addItem}>+</button>
+                    <button className="btn-count" onClick={addItem}>+</button>
                 </div>
-                <button onClick={agregarAlCarrito}>Add</button>
+                <button className="btn-add" onClick={agregarAlCarrito}>Agregar al carrito</button>
            </div> 
 }
 
