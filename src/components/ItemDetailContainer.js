@@ -1,28 +1,27 @@
 import './main.css'
 import ItemDetail from './ItemDetail'
-import products from "../data/products.js"
 import { useEffect, useState } from "react";
+import {useParams} from 'react-router-dom'
 
 function ItemDetailContainer(){
-    const buscarItems = (id) => {
-        return new Promise ((resolve) => {
-            setTimeout(() => {
-                const productDetail = products.find(prod => prod.id === id);
-                resolve(productDetail)
-            }, 2000)
-        })
-    }
+    const [item, setItem] = useState([])
+    const { id } = useParams()
     
-    const [product, setProduct] = useState([])
-
     useEffect(() => {
-        buscarItems(3)
-        .then((res) => setProduct(res))
-        .catch((err) => console.log(err))
-    })
+        setTimeout(() => {
+            fetch("/data/products.json")
+            .then(response => response.json())
+            .then(itemsList => itemsList.find(prod => prod.id === id))
+            .then(data => setItem(data))
+            .catch(err => console.log(err))
+        }, 0);
+    },[id]);
 
-    return <div class="item-detail-container">
-        <ItemDetail item={product}/>
+    console.log(item.imagenA)
+
+
+    return <div className="item-detail-container">
+        <ItemDetail item={item}/>
     </div>
 }
 

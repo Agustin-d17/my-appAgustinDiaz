@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import ItemCount from './ItemCount';
 import './main.css';
 
@@ -5,8 +6,8 @@ function Item({item}) {
     return <div className="item-card">
                 <div className="item-info">
                     <div className="img-container">
-                        <img src={item.imagenA}/>
-                        <img className="img-hover" src={item.imagenB}/>
+                        <img src={item.imagenA} alt={item.name} />
+                        <img className="img-hover" src={item.imagenB} alt={item.name}/>
                     </div>
                     <span className="item-title">{item.name}</span>
                     <div>
@@ -15,6 +16,9 @@ function Item({item}) {
                     </div>
                 </div>
                 <ItemCount stock={item.stock} initial="1" onAdd={(seleccion) => alert(`Agregaste ${seleccion} unidades al carrito`)}/>
+                <Link className="btn-detail-container" to={`/detalle/${item.id}`}>
+                    <button className="btn-detail"> Detalles del producto</button>
+                </Link>
                 
            </div>
 
