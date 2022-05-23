@@ -17,6 +17,12 @@ function NavBar() {
             <li><a href="/#">Nosotros</a></li>
             <li><a href="/#">Contacto</a></li>
         </ul>
+        {/* <div className="menu">
+            <Link to="/"><span>Inicio</span></Link>
+            <Link to="/"><span>Productos</span></Link>
+            <Link to="/"><span>Nosotros</span></Link>
+            <Link to="/"><span>Contacto</span></Link>
+        </div> */}
 
         <CartWidget icon="shopping_cart" />
     </navbar>

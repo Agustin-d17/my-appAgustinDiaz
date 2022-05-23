@@ -180,6 +180,21 @@ main{
     height: 35px
 }
 
+.buy-button {
+    background-color: #fff;
+    border: 2px solid #60ee60;
+    color: #60ee60;
+    margin: 0 5px 0 5px;
+    padding: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.buy-button:hover {
+    background-color: #60ee60;
+    color: #fff;
+}
+
 /* ItemDetail */
 .item-detail-container {
     height: 100vh;

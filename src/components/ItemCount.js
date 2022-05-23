@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './main.css';
 
-function ItemCount({ stock, initial, onAdd }) {
+function ItemCount({ stock, initial, onAdd, handleInputType }) {
     const [seleccion, setSeleccion] = useState(initial);
     
     const removeItem = () => {
@@ -13,7 +13,8 @@ function ItemCount({ stock, initial, onAdd }) {
     }
 
     const agregarAlCarrito = () => {
-        onAdd(seleccion)
+        onAdd(seleccion);
+        handleInputType();
     }
 
 
