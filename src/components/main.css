@@ -228,3 +228,17 @@ main{
     font-size: 30px;
     color: #334433
 }
+
+.btn-close-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: -50px;
+}
+
+.btn-close {
+    border: none ;
+    width: 16px;
+    margin-right: 45px;
+    cursor: pointer;
+}
