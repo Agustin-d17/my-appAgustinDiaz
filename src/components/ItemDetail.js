@@ -3,16 +3,22 @@ import ItemCount from './ItemCount';
 import {useState} from 'react'
 import './main.css'
 import {Link} from 'react-router-dom'
+import { useContext } from 'react'
+import { CartContext } from '../context/CartContext'
 
+
+ 
 function ItemDetail ({item}) {
     const [inputType, setInputType] = useState('itemCount')
+    const { addToCart, cartList } = useContext(CartContext)
     
     function handleInputType() {
         setInputType('buyButtons');
     }
 
     function infoAgregados (seleccion) {
-        alert(`Agregaste ${seleccion} unidades al carrito`)
+        alert(`Agregaste ${seleccion} unidades al carrito`);
+        addToCart({...item, seleccion})
     }
 
     return <div className="item-detail">

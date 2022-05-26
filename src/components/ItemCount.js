@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './main.css';
 
 function ItemCount({ stock, initial, onAdd, handleInputType }) {
-    const [seleccion, setSeleccion] = useState(initial);
+    const [seleccion, setSeleccion] = useState(parseInt(initial));
     
     const removeItem = () => {
         seleccion > 1 ? setSeleccion(parseInt(seleccion) - 1) : alert('No puedes agregar menos de un item');

@@ -17,7 +17,6 @@ function ItemDetailContainer(){
         }, 0);
     },[id]);
 
-    console.log(item.imagenA)
 
 
     return <div className="item-detail-container">

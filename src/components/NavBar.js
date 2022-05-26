@@ -11,18 +11,12 @@ function NavBar() {
             </Link>
         </div>
 
-        <ul className="menu">
-            <li><a href="/#">Inicio</a></li>
-            <li><a href="/#">Productos</a></li>
-            <li><a href="/#">Nosotros</a></li>
-            <li><a href="/#">Contacto</a></li>
-        </ul>
-        {/* <div className="menu">
-            <Link to="/"><span>Inicio</span></Link>
-            <Link to="/"><span>Productos</span></Link>
-            <Link to="/"><span>Nosotros</span></Link>
-            <Link to="/"><span>Contacto</span></Link>
-        </div> */}
+        <div className="menu">
+            <Link to="/" className="menu-link-container"><span className="menu-link">Inicio</span></Link>
+            <Link to="/" className="menu-link-container"><span className="menu-link">Productos</span></Link>
+            <Link to="/" className="menu-link-container"><span className="menu-link">Nosotros</span></Link>
+            <Link to="/" className="menu-link-container"><span className="menu-link">Contacto</span></Link>
+        </div>
 
         <CartWidget icon="shopping_cart" />
     </navbar>

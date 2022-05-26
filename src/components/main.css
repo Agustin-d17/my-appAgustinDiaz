@@ -16,14 +16,17 @@
     list-style: none;
 }
 
-.navbar .menu a {
+.navbar .menu .menu-link-container {
     text-decoration: none;
+}
+
+.navbar .menu .menu-link {
     color : #fff;
     margin: 0 10px 0 10px;
     transition: color 0.5s;
 }
 
-.navbar .menu a:hover {
+.navbar .menu .menu-link:hover{
     color: #90ee90;
 }
 
