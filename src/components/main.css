@@ -30,6 +30,10 @@
     color: #90ee90;
 }
 
+.cart-widget-container {
+    text-decoration: none;
+}
+
 .btn-navbar {
     margin-right: 40px;
     background-color: #000;
@@ -46,6 +50,14 @@
 
 .btn-navbar:active {
     background-color: #333333;
+}
+
+.hidden-cart {
+    margin-right: 100px;
+}
+
+.contador-items {
+    color: #fff;
 }
 
 /* Main */
@@ -123,6 +135,11 @@ main{
     display: flex;
     justify-content: space-between;
     width: 80%
+}
+
+.item-info .item-price {
+    display: flex;
+    justify-content: center;
 }
 
 .btn-detail-container {

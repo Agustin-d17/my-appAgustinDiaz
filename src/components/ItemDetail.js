@@ -10,14 +10,13 @@ import { CartContext } from '../context/CartContext'
  
 function ItemDetail ({item}) {
     const [inputType, setInputType] = useState('itemCount')
-    const { addToCart, cartList } = useContext(CartContext)
+    const { addToCart } = useContext(CartContext)
     
     function handleInputType() {
         setInputType('buyButtons');
     }
 
-    function infoAgregados (seleccion) {
-        alert(`Agregaste ${seleccion} unidades al carrito`);
+    function agregarAlCarrito (seleccion) {
         addToCart({...item, seleccion})
     }
 
@@ -32,7 +31,7 @@ function ItemDetail ({item}) {
                     <span>${item.precio}</span>
                     {
                         inputType === 'itemCount' ? 
-                        <ItemCount stock={item.stock} initial="1" onAdd={infoAgregados} handleInputType={handleInputType}/> : 
+                        <ItemCount stock={item.stock} initial="1" onAdd={agregarAlCarrito} handleInputType={handleInputType}/> : 
                         <BuyButtons />
                     }                    
                 </div>
