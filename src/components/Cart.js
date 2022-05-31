@@ -4,12 +4,13 @@ import CartItem from './CartItem.js'
 import { Link } from "react-router-dom";
 
 function Cart() {
-    const { cartList, vaciarCarrito } = useContext(CartContext)
+    const { cartList, precioTotal, vaciarCarrito } = useContext(CartContext)
 
 
     if (cartList.length > 0) {
         return <div>
                     {cartList.map(product => <CartItem item={product}/>)}
+                    <h2>Total: $ {precioTotal}</h2>
                     <button onClick={vaciarCarrito}>Vaciar carrito</button>
                </div>
     }else{

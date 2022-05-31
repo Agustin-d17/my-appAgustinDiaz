@@ -29,7 +29,8 @@ const CartContextProvider = ({children}) => {
 
     const actualizarCarrito = (array) => {
         setcartList(array);
-        setTotalItems(array.map(el => el.seleccion).reduce((total, item) => total+item,0));
+        setTotalItems(array.map(el => el.seleccion).reduce((total, item) => total+item, 0));
+        setPrecioTotal(array.map(el => el.seleccion*el.precio).reduce((total, item) => total+item, 0));
     }
 
     const eliminarItem = (id) => {
@@ -41,7 +42,7 @@ const CartContextProvider = ({children}) => {
     }
 
     return (
-        <CartContext.Provider value={{cartList, totalItems, addToCart, vaciarCarrito, eliminarItem}}>
+        <CartContext.Provider value={{cartList, totalItems, precioTotal, addToCart, vaciarCarrito, eliminarItem}}>
             {children}
         </CartContext.Provider>
     )
