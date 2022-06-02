@@ -14,10 +14,10 @@ function Item({item}) {
     return <div className="item-card">
                 <div className="item-info">
                     <div className="img-container">
-                        <img src={item.imagenA} alt={item.name} />
+                        <img src={item.imagenA} alt={item.nombre} />
                         <img className="img-hover" src={item.imagenB} alt={item.name}/>
                     </div>
-                    <span className="item-title">{item.name}</span>
+                    <span className="item-title">{item.nombre}</span>
                     <div className="item-price">
                         <span>Precio: ${item.precio}</span>
                     </div>

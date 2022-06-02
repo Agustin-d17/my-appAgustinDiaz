@@ -21,13 +21,13 @@ function ItemDetail ({item}) {
     }
 
     return <div className="item-detail">
-                <img className="item-detail-img" src={item.imagenA} alt={item.name}/>
+                <img className="item-detail-img" src={item.imagenA} alt={item.nombre}/>
                 <div className="item-detail-info">
                     <div className="btn-close-container">
                         <Link to="/"><button className="btn-close"><span className="material-icons">close</span></button></Link>
                     </div>
-                    <h3>{item.name}</h3>
-                    <p className="detalles-producto">{item.detail}</p>
+                    <h3>{item.nombre}</h3>
+                    <p className="detalles-producto">{item.detalle}</p>
                     <span>${item.precio}</span>
                     {
                         inputType === 'itemCount' ? 

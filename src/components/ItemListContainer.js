@@ -1,18 +1,18 @@
 import { useEffect, useState } from "react";
 import ItemList from "./ItemList";
+import { getFirestore, getDocs, collection} from 'firebase/firestore/lite'
+
 
 function ItemListContainer() {
     
     const [items, setItems] = useState([])
-    
 
     useEffect(() => {
-        fetch("./data/products.json")
-        .then(response => response.json())
-        .then(data => {
-            setItems(data)
-        })
-        .catch(error => console.error(error))
+        const db = getFirestore()
+
+        const queryCollection = collection(db, 'productos')
+        getDocs(queryCollection)
+        .then(resp => setItems(resp.docs.map(doc => ({ id: doc.id, ...doc.data() }))))
     }, [])
 
 
