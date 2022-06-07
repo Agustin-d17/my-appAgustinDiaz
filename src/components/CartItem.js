@@ -9,7 +9,7 @@ function CartItem ({item}) {
     }
 
     return <>
-                <li key={item.id}>{item.nombre} - ${item.precio} x {item.seleccion} - <button onClick={removerItem}><span class="material-icons">delete</span></button></li>
+                <li key={item.id}>{item.nombre} - ${item.precio} x {item.seleccion} - <button onClick={removerItem}><span className="material-icons">delete</span></button></li>
            </>
 }
 
