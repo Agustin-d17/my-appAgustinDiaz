@@ -64,7 +64,8 @@ const CartContextProvider = ({children}) => {
         .then((response) => Swal.fire({
             icon: 'success',
             title: 'Su pedido fue recibido',
-            text: `El id de su compra es: ${response.id}`
+            text: `El id de su compra es: ${response.id}`,
+            confirmButtonColor: "#000"
         }))
         .finally(() => cleanCart())
 

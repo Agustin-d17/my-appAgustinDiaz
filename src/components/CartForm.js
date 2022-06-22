@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useContext } from 'react'
 import { CartContext } from '../context/CartContext'
+import Swal from 'sweetalert2';
 
 export default function CartForm({ orderManage }) {
     const [customerData, setCustomerData] = useState({})
@@ -44,7 +45,11 @@ export default function CartForm({ orderManage }) {
             orderManage(customerData)  
         }
         else{
-            alert("s")
+            Swal.fire({
+                icon: "error",
+                text: "Debes completar con tus datos para continuar con la compra", 
+                confirmButtonColor: "#000"
+            })
         }
     }
 
