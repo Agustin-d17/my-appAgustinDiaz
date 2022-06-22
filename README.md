@@ -18,3 +18,5 @@ Lenguajes, librerias y dependencias utilizadas:
 -CSS3 -> Lenguaje de diseño para darle esilos a los componentes.
 
 -JSX -> Extensión de React para la sintaxis del lenguaje JavaScript que proporciona una forma de estructurar la representación de componentes.
+
+Enlace al sitio: http://oneup3d.netlify.app/
