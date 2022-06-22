@@ -1,0 +1,42 @@
+
+.cart-widget-container {
+    text-decoration: none;
+}
+
+
+
+.btn-navbar {
+    margin-right: 40px;
+    background-color: #000;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.btn-navbar span {
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn-navbar:active {
+    background-color: #333333;
+}
+
+.hidden-cart {
+    margin-right: 100px;
+}
+
+.contador-items {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #558855;
+    color: #fff;
+    font-weight: bold;
+    
+}

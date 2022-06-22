@@ -1,4 +1,4 @@
-import './main.css'
+import './ItemDetailContainer.css';
 import ItemDetail from './ItemDetail'
 import { useEffect, useState } from "react";
 import {useParams} from 'react-router-dom'

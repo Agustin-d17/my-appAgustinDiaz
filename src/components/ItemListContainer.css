@@ -1,0 +1,20 @@
+/* ItemListContainer */
+.item-list-container {
+    padding: 20px
+}
+
+.item-list-container .select-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-list-container .select-container span {
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+
+.select-category {
+    margin-bottom: 20px;
+    width: 40%;
+}

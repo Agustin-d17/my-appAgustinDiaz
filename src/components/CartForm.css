@@ -1,0 +1,99 @@
+/* Cart-Form */
+.cart-form {
+    width: 40%
+}
+
+.cart-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-form form div {
+    padding: 0px 0 60px 0;
+    position: relative;
+
+}
+
+.form-input {
+    position: absolute;
+    width: 95%;
+    border: 2px solid #a0a0a0;
+    border-radius: 5px;
+    color: #333333;
+    outline: none;
+    background: none;
+    padding: 8px
+}
+
+.form-label {
+    position: absolute;
+    cursor: text;
+    left: 1rem;
+    top: 0.5rem;
+    color: rgb(120, 120, 120);
+    font-weight: bold;
+    padding: 0 3px 0 3px;
+    transition: top 200ms ease-in,
+                left 200ms ease-in,
+                font-size 200ms ease-in;
+    background-color: #fff;
+}
+
+.input-error {
+    position: absolute;
+    top: 34px;
+    left: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #F22E2E
+}
+
+.form-input:focus ~ .form-label,
+.form-input:not(:placeholder-shown).form-input:not(:focus) ~.form-label  {
+    top: -00.5rem;
+    font-size: 0.8rem;
+    left: 0.8rem;
+}
+
+.cart-totals-container {
+    margin-bottom: 20px
+}
+
+.cart-totals {
+    display: flex;
+    justify-content: space-between
+}
+
+.cart-totals-headers,
+.cart-totals-price {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-totals-headers span {
+    font-weight: bold;
+}
+
+.cart-totals-price {
+    margin-right: 10px;
+}
+
+.cart-totals span {
+    margin-bottom: 8px
+}
+
+.btn-order {
+    border: none;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 0.75px;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.btn-order:hover {
+    background-color: #222222
+}
+

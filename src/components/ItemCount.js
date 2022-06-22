@@ -1,5 +1,6 @@
+import './ItemCount.css';
 import { useState } from 'react';
-import './main.css';
+
 
 function ItemCount({ stock, initial, onAdd, handleInputType }) {
     const [seleccion, setSeleccion] = useState(parseInt(initial));
@@ -12,7 +13,7 @@ function ItemCount({ stock, initial, onAdd, handleInputType }) {
         seleccion < stock ? setSeleccion(parseInt(seleccion) + 1) : alert('No hay suficiente stock');
     }
 
-    const agregarAlCarrito = () => {
+    const addToCart = () => {
         onAdd(seleccion);
         handleInputType();
     }
@@ -24,7 +25,7 @@ function ItemCount({ stock, initial, onAdd, handleInputType }) {
                     <p>{seleccion}</p>
                     <button className="btn-count" onClick={addItem}>+</button>
                 </div>
-                <button className="btn-add" onClick={agregarAlCarrito}>Agregar al carrito</button>
+                <button className="btn-add" onClick={addToCart}>Agregar al carrito</button>
            </div> 
 }
 

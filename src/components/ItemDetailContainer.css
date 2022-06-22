@@ -1,0 +1,9 @@
+/* ItemDetailContainer */
+.item-detail-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(200, 200, 200, 1)
+}

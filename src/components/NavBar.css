@@ -1,0 +1,35 @@
+/* Header */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    width: 100px;
+    margin-left: 40px;
+    padding: 15px 0 15px 0;
+}
+
+.navbar .menu {
+    display: flex;
+    list-style: none;
+}
+
+.navbar .menu .menu-link {
+    color : #fff;
+    margin: 0 10px 0 10px;
+    transition: color 0.5s;
+    text-decoration: none;
+}
+
+.navbar .menu .menu-link-active {
+    color : #90ee90;
+    margin: 0 10px 0 10px;
+    transition: color 0.5s;
+    text-decoration: none;
+}
+
+.navbar .menu .menu-link:hover{
+    color: #90ee90;
+}

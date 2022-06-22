@@ -1,14 +1,14 @@
-import './main.css';
+import './NavBar.css';
 import logoHeader from '../assets/logoHeader.png'
 import CartWidget from './CartWidget';
-import {Link} from 'react-router-dom'
+import {Link, NavLink} from 'react-router-dom'
 import { useContext } from 'react'
 import { CartContext } from '../context/CartContext'
 
 function NavBar() {
     const { cartList } = useContext(CartContext)
 
-    return <navbar className="navbar">
+    return <nav className="navbar">
         <div>
             <Link to="/">
                 <img src={logoHeader} alt="logo" className="logo"/>
@@ -16,14 +16,14 @@ function NavBar() {
         </div>
 
         <div className="menu">
-            <Link to="/" className="menu-link-container"><span className="menu-link">Inicio</span></Link>
-            <Link to="/" className="menu-link-container"><span className="menu-link">Productos</span></Link>
-            <Link to="/" className="menu-link-container"><span className="menu-link">Nosotros</span></Link>
-            <Link to="/" className="menu-link-container"><span className="menu-link">Contacto</span></Link>
+            <NavLink to="/" className={ ({isActive}) => isActive ? "menu-link-active" : "menu-link"}>Inicio</NavLink>
+            <NavLink to="/products" className={({isActive}) => isActive ? "menu-link-active" : "menu-link"}>Productos</NavLink>
+            <NavLink to="/" className="menu-link">Nosotros</NavLink>
+            <NavLink to="/" className="menu-link">Contacto</NavLink>
         </div>
 
         {cartList.length > 0 ? <CartWidget icon="shopping_cart" /> : <div className="hidden-cart"></div>}
-    </navbar>
+    </nav>
 }
 
 export default NavBar;

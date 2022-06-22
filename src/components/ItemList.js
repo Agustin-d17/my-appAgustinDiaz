@@ -1,5 +1,6 @@
+import './ItemList.css';
 import Item from './Item';
-import './main.css';
+
 
 function ItemList ({ database }) {
     return <div className="item-list">

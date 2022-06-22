@@ -1,0 +1,22 @@
+/* Cart */
+.cart {
+    display: flex;
+}
+
+.delete-items, .back-button {
+    border: none;
+    color: #fff;
+    background-color: #F22E2E;
+    padding: 8px;
+    margin-left: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.back-button {
+    background-color: #000;
+}
+
+.empty-cart {
+    margin-left: 10px;
+}
