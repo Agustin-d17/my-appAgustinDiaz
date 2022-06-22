@@ -7,9 +7,6 @@ import Swal from 'sweetalert2';
 
 export default function CartForm({ orderManage }) {
     const [customerData, setCustomerData] = useState({})
-    // const [nameError, setNameError] = useState(false)
-    // const [emailError, setEmailError] = useState(false)
-    // const [phoneError, setphoneError] = useState(false)
     const [errors, setErrors] = useState({})
     const { totalPrice } = useContext(CartContext)
 
@@ -24,8 +21,6 @@ export default function CartForm({ orderManage }) {
     const handleBlur = (e) => {
         handleChange(e);
         setErrors(validateForm(customerData))
-
-        console.log(errors)
     }
 
     const validateForm = (customerData) => {
